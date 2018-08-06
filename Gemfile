@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kaminari'
 gem 'devise'
 gem 'rake', '< 11.0'
+gem 'bullet'
+# gem 'better_errors'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -41,6 +43,8 @@ group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -52,8 +56,8 @@ group :test do
   gem 'faker'
 end
 
-gem 'pry-rails'
+
+gem 'pry-doc'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
 gem 'rails_12factor'
-

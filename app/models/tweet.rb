@@ -1,4 +1,8 @@
 class Tweet < ActiveRecord::Base
+
   belongs_to :user
-  has_many :comments
+  has_many :tweet_tags
+  has_many :tags, through: :tweet_tags
+
 end
+

@@ -312,6 +312,15 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+select {
+  /*padding: 100px 0;*/
+  height: 45px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 15px;
+}
+
 /*
  * Remove inner padding and border in Firefox 4+. */
 button::-moz-focus-inner,
