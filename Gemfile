@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -53,6 +54,10 @@ end
 
 group :test do
   gem 'faker'
+end
+
+group :production do
+  gem 'pg'
 end
 
 

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: :show
+
+  resources :blogs
+  root 'blogs#index'
 end
