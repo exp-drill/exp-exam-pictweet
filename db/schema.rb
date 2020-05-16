@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_011315) do
+ActiveRecord::Schema.define(version: 2020_05_16_060206) do
 
   create_table "comments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -26,21 +26,14 @@ ActiveRecord::Schema.define(version: 2018_08_06_011315) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tweet_tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "tweet_id"
-    t.integer "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tag_id"], name: "index_tweet_tags_on_tag_id"
-    t.index ["tweet_id"], name: "index_tweet_tags_on_tweet_id"
-  end
-
   create_table "tweets", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
     t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.bigint "tag_id"
+    t.index ["tag_id"], name: "index_tweets_on_tag_id"
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -61,6 +54,4 @@ ActiveRecord::Schema.define(version: 2018_08_06_011315) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "tweet_tags", "tags"
-  add_foreign_key "tweet_tags", "tweets"
 end
