@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function(){
       $('#animal').on("click", function() {
         $(this).css('background-color', '#f5f5f3');
         $('#view').css('background-color', 'forestgreen');
-        $('#ride').css('background-color', 'forestgreen');
+        $('#machine').css('background-color', 'forestgreen');
         $('#food').css('background-color', 'forestgreen');
         $('#program').css('background-color', 'forestgreen');
 
@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function(){
       $('#view').on("click", function() {
         $(this).css('background-color', '#f5f5f3');
         $('#animal').css('background-color', 'forestgreen');
-        $('#ride').css('background-color', 'forestgreen');
+        $('#machine').css('background-color', 'forestgreen');
         $('#food').css('background-color', 'forestgreen');
         $('#program').css('background-color', 'forestgreen');
   
@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function(){
         $('#two').show();
       })
 
-      $('#ride').on("click", function() {
+      $('#machine').on("click", function() {
         $(this).css('background-color', '#f5f5f3');
         $('#animal').css('background-color', 'forestgreen');
         $('#view').css('background-color', 'forestgreen');
@@ -49,7 +49,7 @@ $(document).on('turbolinks:load', function(){
         $(this).css('background-color', '#f5f5f3');
         $('#animal').css('background-color', 'forestgreen');
         $('#view').css('background-color', 'forestgreen');
-        $('#ride').css('background-color', 'forestgreen');
+        $('#machine').css('background-color', 'forestgreen');
         $('#program').css('background-color', 'forestgreen');
 
         $('#one').css('display', 'none')
@@ -64,7 +64,7 @@ $(document).on('turbolinks:load', function(){
         $(this).css('background-color', '#f5f5f3');
         $('#animal').css('background-color', 'forestgreen');
         $('#view').css('background-color', 'forestgreen');
-        $('#ride').css('background-color', 'forestgreen');
+        $('#machine').css('background-color', 'forestgreen');
         $('#food').css('background-color', 'forestgreen');
 
         $('#one').css('display', 'none')
@@ -91,7 +91,7 @@ $(document).on('turbolinks:load', function(){
         }
       );
 
-      $('#ride').hover(
+      $('#machine').hover(
         function() {
           $(this).css('color', 'orangered');
         }, function() {
