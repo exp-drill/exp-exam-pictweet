@@ -1,5 +1,57 @@
-<div class="contents row">
+<div class=topic>
+  <div class="tag" id="animal">animal</div>
+  <div class="tags" id="view">view</div>
+  <div class="tag" id="machine">machine</div>
+  <div class="tags" id="food">food</div>
+  <div class="tag" id="program">program</div>
+</div>
+<div class="contents row" id="many">
   <%= render partial: "tweet", collection: @tweets %>
-
   <%= paginate(@tweets) %>
 </div>
+
+<div class="contents row" id="one">
+  <% @tweets.each do |tweet| %> 
+     <% if tweet.tag_id==1 %>
+       <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
+
+<div class="contents row" id="two">
+  <% @tweets.each do |tweet| %> 
+     <% if tweet.tag_id==2 %>
+       <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
+
+<div class="contents row" id="three">
+  <% @tweets.each do |tweet| %> 
+     <% if tweet.tag_id==3 %>
+       <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
+
+<div class="contents row" id="four">
+  <% @tweets.each do |tweet| %> 
+     <% if tweet.tag_id==4 %>
+       <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
+
+<div class="contents row" id="five">
+  <% @tweets.each do |tweet| %> 
+     <% if tweet.tag_id==5 %>
+       <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
+
